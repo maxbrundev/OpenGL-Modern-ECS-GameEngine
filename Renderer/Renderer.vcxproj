@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{34CEC907-3302-415E-859B-706BFA8A2FDE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Renderer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Dependencies\glew\include;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\stb_image;$(SolutionDir)Dependencies\glfw\$(PlatformTarget)\include;$(SolutionDir)Core;$(SolutionDir)Core\include;$(SolutionDir)Utils;$(SolutionDir)Utils\include;$(SolutionDir)ECS;$(SolutionDir)ECS\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)Dependencies/glfw/$(PlatformTarget)/lib;$(SolutionDir)Dependencies/glew/lib/Release/$(Platform)/;$(SolutionDir)Dependencies/SOIL/lib/$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Dependencies\glew\include;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\stb_image;$(SolutionDir)Dependencies\glfw\$(PlatformTarget)\include;$(SolutionDir)Core;$(SolutionDir)Core\include;$(SolutionDir)Utils;$(SolutionDir)Utils\include;$(SolutionDir)ECS;$(SolutionDir)ECS\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)Dependencies/glfw/$(PlatformTarget)/lib;$(SolutionDir)Dependencies/glew/lib/Release/$(Platform)/;$(SolutionDir)Dependencies/SOIL/lib/$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Dependencies\glew\include;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\stb_image;$(SolutionDir)Dependencies\glfw\$(PlatformTarget)\include;$(SolutionDir)Core;$(SolutionDir)Core\include;$(SolutionDir)Utils;$(SolutionDir)Utils\include;$(SolutionDir)ECS;$(SolutionDir)ECS\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)Dependencies/glfw/$(PlatformTarget)/lib;$(SolutionDir)Dependencies/glew/lib/Release/$(Platform)/;$(SolutionDir)Dependencies/SOIL/lib/$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Dependencies\glew\include;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\stb_image;$(SolutionDir)Dependencies\glfw\$(PlatformTarget)\include;$(SolutionDir)Core;$(SolutionDir)Core\include;$(SolutionDir)Utils;$(SolutionDir)Utils\include;$(SolutionDir)ECS;$(SolutionDir)ECS\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)Dependencies/glfw/$(PlatformTarget)/lib;$(SolutionDir)Dependencies/glew/lib/Release/$(Platform)/;$(SolutionDir)Dependencies/SOIL/lib/$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>RENDERER_EXPORT</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeaderFile>renderer_stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>libSOIL.lib;glfw3dll.lib;glew32.lib;opengl32.lib;ECS.lib;Core.lib;Utils.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>RENDERER_EXPORT</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeaderFile>renderer_stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>libSOIL.lib;glfw3dll.lib;glew32.lib;opengl32.lib;ECS.lib;Core.lib;Utils.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>RENDERER_EXPORT</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeaderFile>renderer_stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libSOIL.lib;glfw3dll.lib;glew32.lib;opengl32.lib;ECS.lib;Core.lib;Utils.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>RENDERER_EXPORT</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeaderFile>renderer_stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libSOIL.lib;glfw3dll.lib;glew32.lib;opengl32.lib;ECS.lib;Core.lib;Utils.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Entities\MeshGameObject.h" />
+    <ClInclude Include="include\Renderer.h" />
+    <ClInclude Include="include\RendererAPI.h" />
+    <ClInclude Include="include\Entities\CameraGameObject.h" />
+    <ClInclude Include="include\LowRenderer\Color.h" />
+    <ClInclude Include="include\Entities\LightGameObject.h" />
+    <ClInclude Include="include\Components\MaterialComponent.h" />
+    <ClInclude Include="include\LowRenderer\Vertex.h" />
+    <ClInclude Include="include\Components\MeshComponent.h" />
+    <ClInclude Include="include\Systems\RenderSystem.h" />
+    <ClInclude Include="include\Resources\Buffers\IndexBuffer.h" />
+    <ClInclude Include="include\Resources\Buffers\VertexArray.h" />
+    <ClInclude Include="include\Resources\Buffers\VertexBuffer.h" />
+    <ClInclude Include="include\Resources\Buffers\VertexBufferLayout.h" />
+    <ClInclude Include="include\Resources\Mesh.h" />
+    <ClInclude Include="include\Resources\ResourcesManager.h" />
+    <ClInclude Include="include\Resources\Shader.h" />
+    <ClInclude Include="include\Resources\Texture.h" />
+    <ClInclude Include="renderer_stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="include\Entities\TexturedMeshGameObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Entities\MeshGameObject.cpp" />
+    <ClCompile Include="src\Entities\CameraGameObject.cpp" />
+    <ClCompile Include="src\LowRenderer\Color.cpp" />
+    <ClCompile Include="src\Entities\LightGameObject.cpp" />
+    <ClCompile Include="src\Components\MaterialComponent.cpp" />
+    <ClCompile Include="src\LowRenderer\Vertex.cpp" />
+    <ClCompile Include="src\Components\MeshComponent.cpp" />
+    <ClCompile Include="src\Systems\RenderSystem.cpp" />
+    <ClCompile Include="src\Resources\Buffers\IndexBuffer.cpp" />
+    <ClCompile Include="src\Resources\Buffers\VertexArray.cpp" />
+    <ClCompile Include="src\Resources\Buffers\VertexBuffer.cpp" />
+    <ClCompile Include="src\Resources\Mesh.cpp" />
+    <ClCompile Include="src\Resources\ResourcesManager.cpp" />
+    <ClCompile Include="src\Resources\Shader.cpp" />
+    <ClCompile Include="src\Resources\Texture.cpp" />
+    <ClCompile Include="src\vendor\stb_image.cpp" />
+    <ClCompile Include="renderer_stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">renderer_stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">renderer_stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">renderer_stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">renderer_stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\Entities\TexturedMeshGameObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.vcxproj">
+      <Project>{bc42a924-583a-4e39-bf73-1b32dd5069b4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.vcxproj">
+      <Project>{f78ad70e-320a-4af1-9f8a-f06edde911eb}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
