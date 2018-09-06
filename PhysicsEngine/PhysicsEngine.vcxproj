@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{086EA4B7-2C68-4052-8D1F-036258F61E68}</ProjectGuid>
+    <RootNamespace>Physics</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>PhysicsEngine</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Dependencies\glew\include;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\stb_image;$(SolutionDir)Dependencies\glfw\$(PlatformTarget)\include;$(SolutionDir)ECS;$(SolutionDir)ECS\include;$(SolutionDir)Utils;$(SolutionDir)Utils\include;$(SolutionDir)Core;$(SolutionDir)Core\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)Dependencies/glfw/$(PlatformTarget)/lib;$(SolutionDir)Dependencies/glew/lib/Release/$(Platform)/;$(SolutionDir)Dependencies/SOIL/lib/$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Dependencies\glew\include;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\stb_image;$(SolutionDir)Dependencies\glfw\$(PlatformTarget)\include;$(SolutionDir)ECS;$(SolutionDir)ECS\include;$(SolutionDir)Utils;$(SolutionDir)Utils\include;$(SolutionDir)Core;$(SolutionDir)Core\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(SolutionDir)Dependencies/glfw/$(PlatformTarget)/lib;$(SolutionDir)Dependencies/glew/lib/Release/$(Platform)/;$(SolutionDir)Dependencies/SOIL/lib/$(PlatformTarget);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(OutDir);$(SolutionDir)Dependencies/glfw/$(PlatformTarget)/lib;$(SolutionDir)Dependencies/glew/lib/Release/$(Platform)/;$(SolutionDir)Dependencies/SOIL/lib/$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Dependencies\glew\include;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\stb_image;$(SolutionDir)Dependencies\glfw\$(PlatformTarget)\include;$(SolutionDir)ECS;$(SolutionDir)ECS\include;$(SolutionDir)Utils;$(SolutionDir)Utils\include;$(SolutionDir)Core;$(SolutionDir)Core\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(OutDir);$(SolutionDir)Dependencies/glfw/$(PlatformTarget)/lib;$(SolutionDir)Dependencies/glew/lib/Release/$(Platform)/;$(SolutionDir)Dependencies/SOIL/lib/$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Dependencies\glew\include;$(SolutionDir)Dependencies\glm\include;$(SolutionDir)Dependencies\stb_image;$(SolutionDir)Dependencies\glfw\$(PlatformTarget)\include;$(SolutionDir)ECS;$(SolutionDir)ECS\include;$(SolutionDir)Utils;$(SolutionDir)Utils\include;$(SolutionDir)Core;$(SolutionDir)Core\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>physics_stdafx.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>PHYSICS_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libSOIL.lib;glfw3dll.lib;glew32.lib;opengl32.lib;ECS.lib;Core.lib;Utils.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>physics_stdafx.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>PHYSICS_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libSOIL.lib;glfw3dll.lib;glew32.lib;opengl32.lib;ECS.lib;Core.lib;Utils.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>physics_stdafx.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>PHYSICS_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libSOIL.lib;glfw3dll.lib;glew32.lib;opengl32.lib;ECS.lib;Core.lib;Utils.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>physics_stdafx.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>PHYSICS_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libSOIL.lib;glfw3dll.lib;glew32.lib;opengl32.lib;ECS.lib;Core.lib;Utils.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Colliders\Bounds\AABB.h" />
+    <ClInclude Include="include\Colliders\Bounds\BoundingSphere.h" />
+    <ClInclude Include="include\Colliders\Bounds\IBounds.h" />
+    <ClInclude Include="include\Colliders\BoxColliderComponent.h" />
+    <ClInclude Include="include\Colliders\ACollider.h" />
+    <ClInclude Include="include\Colliders\ColliderEvents.h" />
+    <ClInclude Include="include\Collision\CollisionEvents.h" />
+    <ClInclude Include="include\Collision\CollisionInfo.h" />
+    <ClInclude Include="include\Collision\CollisionSystem.h" />
+    <ClInclude Include="include\Physics.h" />
+    <ClInclude Include="include\PhysicsAPI.h" />
+    <ClInclude Include="include\RigidBodyComponent.h" />
+    <ClInclude Include="include\PhysicsSystem.h" />
+    <ClInclude Include="include\Colliders\Bounds\OBB.h" />
+    <ClInclude Include="include\Collision\Octree.h" />
+    <ClInclude Include="physics_stdafx.h" />
+    <ClInclude Include="include\Colliders\SphereColliderComponent.h" />
+    <ClInclude Include="include\Ray.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Ray.cpp" />
+    <ClCompile Include="src\Colliders\Bounds\BoundingSphere.cpp" />
+    <ClCompile Include="src\Collision\Octree.cpp" />
+    <ClCompile Include="src\Colliders\Bounds\OBB.cpp" />
+    <ClCompile Include="src\Colliders\Bounds\AABB.cpp" />
+    <ClCompile Include="src\Collision\CollisionSystem.cpp" />
+    <ClCompile Include="src\PhysicsSystem.cpp" />
+    <ClCompile Include="src\Colliders\BoxColliderComponent.cpp" />
+    <ClCompile Include="physics_stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\Colliders\SphereColliderComponent.cpp" />
+    <ClCompile Include="src\RigidBodyComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.vcxproj">
+      <Project>{bc42a924-583a-4e39-bf73-1b32dd5069b4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ECS\ECS.vcxproj">
+      <Project>{412b2f97-0a9c-4cd3-8ee7-1e7fc6e03aa5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.vcxproj">
+      <Project>{f78ad70e-320a-4af1-9f8a-f06edde911eb}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
